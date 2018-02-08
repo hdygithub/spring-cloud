@@ -9,6 +9,8 @@ import org.springframework.web.client.RestTemplate;
 import javax.servlet.http.HttpServlet;
 
 /**
+ * 测试
+ * <p>
  * Created by huadongyang on 2017/5/27.
  */
 @RestController
@@ -18,7 +20,7 @@ public class ConsumerController {
     private RestTemplate restTemplate;
 
     @RequestMapping(value = "/add")
-    public String add(HttpServlet httpServlet){
-        return restTemplate.getForEntity("http://COMPUTE-SERVICE/calculate/add?a=10&b=20",String.class).getBody();
+    public String add(HttpServlet httpServlet) {
+        return restTemplate.getForEntity("http://COMPUTE-SERVICE/calculate/add?a=10&b=20", String.class).getBody();
     }
 }
